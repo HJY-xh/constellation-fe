@@ -57,25 +57,25 @@ const Card = (props: CardProps) => {
 
     return (
         <div className={styles.cardContainer}>
-                {xz_career && <p>
-                    <span>工作运势</span>
-                    <ProgressBar percent={Number(xz_career) * 20} />
-                </p>}
                 {xz_health && <p>
                     <span>健康运势</span>
                     <ProgressBar percent={Number(xz_health) * 20} />
                 </p>}
+                {xz_career && <p>
+                    <span>工作运势</span>
+                    {!!Number(xz_career) ? <ProgressBar percent={Number(xz_career) * 20} /> :  <span>{xz_career}</span>}
+                </p>}
                 {xz_love && <p>
                     <span>爱情运势</span>
-                    <ProgressBar percent={Number(xz_love) * 20} />
+                    {!!Number(xz_love) ? <ProgressBar percent={Number(xz_love) * 20} /> :  <span>{xz_love}</span>}
                 </p>}
                 {xz_money && <p>
                     <span>财运</span>
-                    <ProgressBar percent={Number(xz_money) * 20} />
+                    {!!Number(xz_money) ? <ProgressBar percent={Number(xz_money) * 20} /> :  <span>{xz_money}</span>}
                 </p>}
                 {xz_summary && <p>
                     <span>综合运势</span>
-                    <ProgressBar percent={Number(xz_summary) * 20} />
+                    {!!Number(xz_summary) ? <ProgressBar percent={Number(xz_summary) * 20} /> :  <span>{xz_summary}</span>}
                 </p>}
                 {xz_number && <p>
                     <span>幸运数字</span>
