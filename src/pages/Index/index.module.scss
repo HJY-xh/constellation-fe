@@ -1,0 +1,13 @@
+$gridColumn: 45%;
+$gridRow: 80px;
+
+.container {
+    padding: 20px;
+    max-width: 550px;
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, $gridColumn);
+        grid-template-rows: repeat(6, $gridRow);
+        grid-column-gap: 10%;
+    }
+}
